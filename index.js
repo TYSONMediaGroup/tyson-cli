@@ -61,10 +61,10 @@ program
     console.log(chalk.bgMagenta.white.bold(' myTYSON Quick Publish \n'));
     
     const answers = await inquirer.prompt([
-      { type: 'list', name: 'type', message: 'Select Publisher:', choices: ['TMG', 'AVIATION', 'ATLANTIS'] },
+      { type: 'select', name: 'type', message: 'Select Publisher:', choices: ['TMG', 'AVIATION', 'ATLANTIS'] },
       { type: 'input', name: 'title', message: 'Article Title:' },
       { type: 'input', name: 'author', message: 'Author Name:', default: 'Editorial Staff' },
-      { type: 'list', name: 'category', message: 'Category:', choices: ['News', 'Technology', 'Reviews', 'Releases'] }
+      { type: 'select', name: 'category', message: 'Category:', choices: ['News', 'Technology', 'Reviews', 'Releases'] }
     ]);
 
     const newArticle = {
